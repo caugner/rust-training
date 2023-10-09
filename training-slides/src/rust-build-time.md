@@ -44,12 +44,17 @@
     ```text
     D -> C -> B -> A -> App
     ```
-* Good dependency graph (A, B, and C can be built in parallel):
+* Good dependency graph (A, B, and C can be built in parallel and with greater incrementality):
     ```text
       /-> A  \
     D ->  B  -> App
       \-> C  /
     ```
+Note:
+To clarify
+
+* more parallelism -> the compiler can do more work at the same time
+* more incrementality -> the compiler can avoid doing work it's done before
 
 ## Turn off unused features
 
